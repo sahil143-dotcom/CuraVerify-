@@ -1,0 +1,30 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Clinical arm data (regeneratable; not committed) ---
+clinical/data/raw/
+clinical/data/*.db
+clinical/data/processed/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Stray local test files ---
+_env_check.txt

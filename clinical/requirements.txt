@@ -1,0 +1,23 @@
+# CuraVerify — Clinical arm (Day 1: data + EDA)
+# Core data stack
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+
+# Notebook (interactive EDA)
+jupyter>=1.0
+ipykernel>=6.0
+
+# Dataset acquisition (optional but preferred; script falls back to raw mirrors)
+kagglehub>=0.3
+
+# --- Added in later days (kept here for reference, install when you reach them) ---
+# Day 2 (clinical NER):
+#   scispacy>=0.5.4
+#   spacy>=3.7
+#   medspacy>=1.0
+# Day 3 (KG + verifier):
+#   networkx>=3.0
+# Day 4 (demo):
+#   streamlit>=1.30

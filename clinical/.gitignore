@@ -1,0 +1,12 @@
+# Data (do not commit raw dataset or DB)
+data/raw/
+data/*.db
+data/processed/
+
+# NOTE: results/ (EDA figures + report) ARE committed on purpose so the
+# README screenshots render on GitHub. Delete this note if you change that.
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
