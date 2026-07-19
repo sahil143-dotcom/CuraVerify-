@@ -1,0 +1,66 @@
+{
+  "graphrag": {
+    "n_docs": 50,
+    "hallucination_detection_E3E4": {
+      "precision": 0.6176,
+      "recall": 0.84,
+      "f1": 0.7119,
+      "tp": 21,
+      "fp": 13,
+      "fn": 4
+    },
+    "E4_detection_wrong_value": {
+      "precision": 0.1515,
+      "recall": 1.0,
+      "f1": 0.2632,
+      "tp": 5,
+      "fp": 28,
+      "fn": 0
+    },
+    "type_match_rate": 0.2,
+    "grade_counts": {
+      "E1": 325,
+      "E2": 207,
+      "E3": 4,
+      "E4": 93
+    },
+    "confusion_doc": {
+      "tp": 21,
+      "fp": 13,
+      "fn": 4,
+      "tn": 12
+    }
+  },
+  "flat": {
+    "n_docs": 50,
+    "hallucination_detection_E3E4": {
+      "precision": 0.6176,
+      "recall": 0.84,
+      "f1": 0.7119,
+      "tp": 21,
+      "fp": 13,
+      "fn": 4
+    },
+    "E4_detection_wrong_value": {
+      "precision": 0.1515,
+      "recall": 1.0,
+      "f1": 0.2632,
+      "tp": 5,
+      "fp": 28,
+      "fn": 0
+    },
+    "type_match_rate": 0.2,
+    "grade_counts": {
+      "E1": 350,
+      "E2": 180,
+      "E3": 6,
+      "E4": 93
+    },
+    "confusion_doc": {
+      "tp": 21,
+      "fp": 13,
+      "fn": 4,
+      "tn": 12
+    }
+  }
+}

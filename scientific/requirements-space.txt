@@ -1,0 +1,7 @@
+# Lean runtime for Hugging Face Spaces demo (mirrors repo-root requirements.txt)
+streamlit>=1.30
+pandas>=2.0
+numpy>=1.24
+networkx>=3.0
+scikit-learn>=1.3
+pydantic>=2.0

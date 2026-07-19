@@ -6,11 +6,15 @@ __pycache__/
 build/
 dist/
 
-# --- Virtual environments ---
+# --- Virtual environments / local caches ---
 .venv/
 venv/
 env/
 ENV/
+.tmp/
+.pip_cache/
+.hf_cache/
+_disk.txt
 
 # --- Jupyter ---
 .ipynb_checkpoints/

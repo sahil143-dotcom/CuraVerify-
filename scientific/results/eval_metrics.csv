@@ -1,0 +1,3 @@
+method,e3e4_f1,e3e4_precision,e3e4_recall,e4_f1,type_match_rate,n_docs
+graphrag,0.7119,0.6176,0.84,0.2632,0.2,50
+flat,0.7119,0.6176,0.84,0.2632,0.2,50

@@ -17,19 +17,22 @@ Plus data curation (`hallucinate.py`) and eval (`evaluate.py` vs flat baseline).
 
 ## Quickstart
 
-```bash
+```powershell
 # from repo root D:\CuraVerify
-py -m pip install -r scientific/requirements.txt
+# Prefer a venv on D: if C: is low on space
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r scientific\requirements.txt
 
-# Ensure BioLaySumm JSONL exists (already downloaded):
-#   scientific/data/biolaysumm/{eLife,PLOS}/*.jsonl
+# Lean UI (bundled demo samples)
+.\.venv\Scripts\streamlit.exe run scientific\app.py
 
-# End-to-end (load → KG → hallucinate → verify → metrics)
-py -m scientific.run_pipeline
-
-# Demo UI
-streamlit run scientific/app.py
+# Full pipeline: load → KG → hallucinate → verify → metrics
+.\.venv\Scripts\python.exe -m scientific.run_pipeline
 ```
+
+Latest local run (example): **6,763** papers loaded, **200** KGs, **50** hallucinated summaries, E3+E4 F1 ≈ **0.71** (see `results/eval_table.md`).
+
+Deploy to Hugging Face Spaces: see [DEPLOY.md](DEPLOY.md).
 
 Optional LLM refinement (otherwise offline hybrid rules):
 
