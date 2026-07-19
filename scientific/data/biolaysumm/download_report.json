@@ -1,0 +1,66 @@
+{
+  "output_dir": "D:\\CuraVerify\\scientific\\data\\biolaysumm",
+  "strategy": "full eLife + PLOS val/test + PLOS train sample",
+  "datasets": {
+    "eLife": {
+      "hf_id": "BioLaySumm/BioLaySumm2025-eLife",
+      "disk": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\eLife",
+      "splits": {
+        "train": {
+          "n": 4346,
+          "article_chars_median": 55748,
+          "summary_chars_median": 2191,
+          "article_chars_mean": 57282,
+          "summary_chars_mean": 2211,
+          "jsonl": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\eLife\\train.jsonl"
+        },
+        "validation": {
+          "n": 241,
+          "article_chars_median": 54612,
+          "summary_chars_median": 2247,
+          "article_chars_mean": 56347,
+          "summary_chars_mean": 2254,
+          "jsonl": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\eLife\\validation.jsonl"
+        },
+        "test": {
+          "n": 142,
+          "article_chars_median": 45940,
+          "summary_chars_median": 0,
+          "article_chars_mean": 46226,
+          "summary_chars_mean": 0,
+          "jsonl": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\eLife\\test.jsonl"
+        }
+      }
+    },
+    "PLOS": {
+      "hf_id": "BioLaySumm/BioLaySumm2025-PLOS",
+      "disk": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\PLOS",
+      "splits": {
+        "validation": {
+          "n": 1376,
+          "article_chars_median": 37933,
+          "summary_chars_median": 1260,
+          "article_chars_mean": 39084,
+          "summary_chars_mean": 1222,
+          "jsonl": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\PLOS\\validation.jsonl"
+        },
+        "test": {
+          "n": 142,
+          "article_chars_median": 43483,
+          "summary_chars_median": 0,
+          "article_chars_mean": 44596,
+          "summary_chars_mean": 0,
+          "jsonl": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\PLOS\\test.jsonl"
+        },
+        "train_sample": {
+          "n": 800,
+          "article_chars_median": 38216,
+          "summary_chars_median": 1272,
+          "article_chars_mean": 38841,
+          "summary_chars_mean": 1223,
+          "jsonl": "D:\\CuraVerify\\scientific\\data\\biolaysumm\\PLOS\\train_sample.jsonl"
+        }
+      }
+    }
+  }
+}

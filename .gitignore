@@ -20,6 +20,18 @@ clinical/data/raw/
 clinical/data/*.db
 clinical/data/processed/
 
+# --- Scientific arm data (large; regeneratable) ---
+scientific/data/biolaysumm/eLife/
+scientific/data/biolaysumm/PLOS/
+scientific/data/biolaysumm/*.jsonl
+scientific/data/*.db
+scientific/data/knowledge_graphs/
+.hf_cache/
+
+# --- Local install / temp caches ---
+.pip_cache/
+.pip_tmp/
+
 # --- OS / editor cruft ---
 .DS_Store
 Thumbs.db
@@ -28,3 +40,4 @@ Thumbs.db
 
 # --- Stray local test files ---
 _env_check.txt
+EDA

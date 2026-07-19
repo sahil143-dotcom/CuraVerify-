@@ -21,7 +21,10 @@ from typing import Dict, List, Tuple
 # Requires at least 3 characters so we don't match stray initials like "T:".
 _HEADER_RE = re.compile(
     r"""
-    (?:^|(?<=[\s.]))                       # start-of-string, or after whitespace/period
+    (?:^|(?<=[^A-Za-z0-9]))                 # start-of-string, or after any non-alphanumeric
+                                            # char (space, period, comma, ')', etc.). MTSamples
+                                            # often jams a comma before a header with no space,
+                                            # so we must not require whitespace here.
     (?P<header>
         [A-Z][A-Z0-9]{0,}                  # first uppercase word
         (?:[ /&,'()\-]+[A-Z0-9][A-Z0-9]*)* # optional following uppercase words
@@ -30,6 +33,9 @@ _HEADER_RE = re.compile(
     """,
     re.VERBOSE,
 )
+
+# A real header is a short phrase, not a whole shouted sentence.
+_MAX_HEADER_WORDS = 7
 
 # Headers must be at least this long (letters only) to count. Filters out noise
 # like "MR:" while keeping real short headers such as "CC" (chief complaint).
@@ -45,7 +51,9 @@ def _is_plausible_header(header: str) -> bool:
         return True
     if len(letters) < _MIN_HEADER_LETTERS:
         return False
-    # Reject pure numbers / single stray letters already handled above.
+    # A header is a short phrase, not an all-caps sentence.
+    if len(header.split()) > _MAX_HEADER_WORDS:
+        return False
     return True
 
 
